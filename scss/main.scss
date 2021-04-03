@@ -1,0 +1,225 @@
+html,body{
+  font-size: 14px;
+}
+*{
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+$color-primary: #2a73dd;
+$color-secondary: #1d365e;
+.header {
+  background-color: #f5f9fe;
+  box-shadow: 0 2px 4px #e2ebfc;
+  border-bottom: 1px solid #e2ebfc;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+  nav {
+    padding: 7px 14px;
+    .navbar-brand {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: $color-primary;
+    }
+    #navbarNav {
+      ul {
+        margin-left: auto;
+        li {
+          .nav-link {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: $color-secondary;
+            padding: 25px;
+          }
+          .nav-link-active {
+            color: $color-primary;
+          }
+          .nav-link:after {
+            transform: scaleX(0);
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: $color-primary;
+            transition: all 0.5s;
+          }
+          .nav-link-active:after,
+          .nav-link:hover:after {
+            width: 100%;
+            transform: scaleX(1);
+          }
+          .nav-link:hover {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+}
+//CAROUSEL
+section.carousel {
+  padding: 225px 0;
+  background-image: url(../img/img/product-header-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+
+  .carousel__content {
+    padding: 120px 15px;
+    h1 {
+      font-size: 70px;
+      font-weight: 700;
+      color: #2a73dd;
+      line-height: 1.2;
+    }
+    h3 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #1d365e;
+      letter-spacing: 0.015rem;
+      margin-bottom: 30px;
+      line-height: 1.2;
+    }
+    p {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #656774;
+      margin-bottom: 25px;
+    }
+    .button-group {
+      button {
+        border-radius: 8px;
+      }
+      .btn-white {
+        background: transparent;
+        padding: 13.5px 44px;
+        margin-right:10px;
+        border: 2px solid #2a73dd;
+        border-radius: 8px;
+        letter-spacing: 0.03rem;
+        font-size: 14px;
+        font-weight: 600;
+        color: #2a73dd;
+        box-shadow: 0 3px 6px #c9d8f4;
+        transition: 0.5s;
+      }
+      .btn-white:hover {
+        background: #2a73dd;
+        transition: all 0.5s;
+        color: white;
+      }
+      .btn-blue {
+        background: linear-gradient(120deg, #60a4f4, #2a73dd);
+        padding: 15.5px 46px;
+        border: none;
+        border-radius: 8px;
+        letter-spacing: 0.03rem;
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        transition: 0.5s;
+      }
+      .btn-blue:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+  .carousel__image {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+//PRODUCT LIST
+.product-list {
+  background-color: #f5f9fe;
+  padding: 100px 189.6px;
+  .product__title {
+    margin-bottom: 70px;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1d365e;
+    letter-spacing: 0.015rem;
+  }
+  .row {
+    .col-4 {
+      .card {
+        padding: 30px;
+        margin: 0 0 30px;
+        box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
+        border-radius: 0.25em;
+        border: none;
+        background-color: #f5f9fe;
+        img {
+          box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
+          border-radius: 8px;
+        }
+        .card-body {
+          h3 {
+            font-size: 20px;
+            color: #1d365e;
+            margin: 0 0 7px;
+          }
+          p {
+            margin: 0 0 14px;
+          }
+          .click__buy {
+            .star {
+              color: #f9d412;
+            }
+            .buy__now {
+              .button__buy {
+                font-size: 11px;
+                padding: 8px 20px;
+                border:none;
+                color: #2a73dd;
+                background-color: #f5f9fe;
+                border-radius: 4px;
+                box-shadow: 2px 2px 4px #e2ebfc, -2px -2px 4px #fff;
+              }
+              .button__buy:hover{
+                box-shadow:inset 1px 1px 3px #e2ebfc, inset -2px -2px 5px #fff;
+                transition: all 0.6s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//FOOTER
+footer {
+  width: 100%;
+  padding: 110px 0 60px;
+  background-image: url(../img/img/angle-up-light.svg);
+  background-position: top center;
+  background-size: auto;
+  background-color: #2a73dd;
+  background-repeat: no-repeat;
+  .container {
+    .row {
+      .copy__right {
+        color: white;
+      }
+      .contact__info {
+        margin-left:auto;
+        text-align:end;
+        a {
+          color: white;
+          text-decoration: none;
+          padding:7px 14px;
+          font-weight: 600;
+        }
+        a:hover{
+          color:#c9d8f4;
+          transition: all 0.5s;
+        }
+      }
+    }
+  }
+}
